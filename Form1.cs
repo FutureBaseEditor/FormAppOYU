@@ -29,5 +29,40 @@ namespace MyFirstFormAppProject
             }
             InvalidText.Visible = true;
         }
+
+        private void Username_TextChanged(object sender, EventArgs e)
+        {
+            ValidateTextBoxes();
+        }
+
+        private void Password_TextChanged(object sender, EventArgs e)
+        {
+            ValidateTextBoxes();
+        }
+
+        void ValidateTextBoxes()
+        {
+            LoginButton.Enabled = Username.Text.Trim() != "" && Password.Text.Trim() != "";
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        //bool Kontrol()
+        //{
+        //    string[] kullaniciAdlari = { "Admin", "Mustafa", "Dila" };
+
+        //    for (int i = 0; i < kullaniciAdlari.Length; i++)
+        //    {
+        //        if (Username.Text == kullaniciAdlari[i])
+        //        {
+        //            return true;
+        //        }
+        //    }
+
+        //    return false;
+        //}
     }
 }

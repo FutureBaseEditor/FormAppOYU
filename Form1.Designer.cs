@@ -44,7 +44,9 @@
             // 
             this.LoginButton.BackColor = System.Drawing.Color.Orange;
             this.LoginButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoginButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LoginButton.Enabled = false;
+            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.LoginButton.ForeColor = System.Drawing.Color.Black;
             this.LoginButton.Location = new System.Drawing.Point(88, 258);
             this.LoginButton.Name = "LoginButton";
@@ -60,7 +62,7 @@
             this.Username.Name = "Username";
             this.Username.Size = new System.Drawing.Size(187, 27);
             this.Username.TabIndex = 10;
-            this.Username.Text = " ";
+            this.Username.TextChanged += new System.EventHandler(this.Username_TextChanged);
             // 
             // errorProvider1
             // 
@@ -73,6 +75,7 @@
             this.Password.Size = new System.Drawing.Size(187, 27);
             this.Password.TabIndex = 11;
             this.Password.Text = " ";
+            this.Password.TextChanged += new System.EventHandler(this.Password_TextChanged);
             // 
             // label1
             // 
@@ -117,6 +120,7 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giriş Yap";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
