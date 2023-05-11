@@ -13,21 +13,25 @@ namespace MyFirstFormAppProject
             if (Username.Text != "Admin" && Password.Text != "1234")
             {
                 InvalidText.Text = "Girdiðiniz Bilgiler Hatalý";
+                InvalidText.Visible = true;
             }
             else if (Username.Text != "Admin")
             {
                 InvalidText.Text = "Kullanýcý Adý Hatalý";
+                InvalidText.Visible = true;
             }
             else if (Password.Text != "1234")
             {
                 InvalidText.Text = "Þifre Hatalý";
+                InvalidText.Visible = true;
             }
             else
             {
-                InvalidText.Text = "Hoþgeldiniz " + Username.Text;
-                InvalidText.ForeColor = Color.DarkGreen;
+                //InvalidText.Text = "Hoþgeldiniz " + Username.Text;
+                //InvalidText.ForeColor = Color.DarkGreen;
+                Form2 fr2 = new Form2();
+                fr2.Show();
             }
-            InvalidText.Visible = true;
         }
 
         private void Username_TextChanged(object sender, EventArgs e)
