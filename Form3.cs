@@ -78,7 +78,6 @@ namespace MyFirstFormAppProject
             RenkDegistir(Fast, FastButtonDurum);
         }
 
-
         void RenkDegistir(Button button,Durum buttonDurum)
         {
             button.BackColor = (buttonDurum == Durum.Secili) ? Color.YellowGreen : Color.Brown;
