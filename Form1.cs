@@ -1,72 +1,124 @@
-namespace MyFirstFormAppProject
+using System.Security.Cryptography;
+
+namespace GoodFastCheap
 {
-    public partial class LoginForm : Form
+    public partial class Form1 : Form
     {
-        public LoginForm()
+        public Form1()
         {
             InitializeComponent();
         }
 
-        private void LoginButton_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            InvalidText.ForeColor = Color.IndianRed;
-            if (Username.Text != "Admin" && Password.Text != "1234")
+            if (button1.ForeColor == Color.Black && button2.ForeColor == Color.Black && button3.ForeColor == Color.DarkGray)
             {
-                InvalidText.Text = "Girdiðiniz Bilgiler Hatalý";
-                InvalidText.Visible = true;
+                button1.ForeColor = Color.DarkGray;
+                button1.BackColor = Color.LightGray;
+                button3.ForeColor = Color.Black;
+                button3.BackColor = Color.DarkGray;
             }
-            else if (Username.Text != "Admin")
+            else if (button1.ForeColor == Color.DarkGray && button2.ForeColor == Color.Black && button3.ForeColor == Color.Black)
             {
-                InvalidText.Text = "Kullanýcý Adý Hatalý";
-                InvalidText.Visible = true;
+                button1.ForeColor = Color.Black;
+                button1.BackColor = Color.DarkGray;
+
+                Random rnd = new Random();
+                int random = rnd.Next(2);
+
+                if (random == 0)
+                {
+                    button2.ForeColor = Color.DarkGray;
+                    button2.BackColor = Color.LightGray;
+                }
+                else
+                {
+                    button3.ForeColor = Color.DarkGray;
+                    button3.BackColor = Color.LightGray;
+                }
             }
-            else if (Password.Text != "1234")
+            else if (button1.ForeColor == Color.Black && button2.ForeColor == Color.DarkGray && button3.ForeColor == Color.Black)
             {
-                InvalidText.Text = "Þifre Hatalý";
-                InvalidText.Visible = true;
+                button1.ForeColor = Color.DarkGray;
+                button1.BackColor = Color.LightGray;
+                button2.ForeColor = Color.Black;
+                button2.BackColor = Color.DarkGray;
             }
-            else
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (button2.ForeColor == Color.Black && button1.ForeColor == Color.Black && button3.ForeColor == Color.DarkGray)
             {
-                //InvalidText.Text = "Hoþgeldiniz " + Username.Text;
-                //InvalidText.ForeColor = Color.DarkGreen;
-                Form2 fr2 = new Form2();
-                fr2.Show();
+                button2.ForeColor = Color.DarkGray;
+                button2.BackColor = Color.LightGray;
+                button3.ForeColor = Color.Black;
+                button3.BackColor = Color.DarkGray;
+            }
+            else if (button2.ForeColor == Color.DarkGray && button1.ForeColor == Color.Black && button3.ForeColor == Color.Black)
+            {
+                button2.ForeColor = Color.Black;
+                button2.BackColor = Color.DarkGray;
+
+                Random rnd = new Random();
+                int random = rnd.Next(2);
+
+                if (random == 0)
+                {
+                    button1.ForeColor = Color.DarkGray;
+                    button1.BackColor = Color.LightGray;
+                }
+                else
+                {
+                    button3.ForeColor = Color.DarkGray;
+                    button3.BackColor = Color.LightGray;
+                }
+            }
+            else if (button2.ForeColor == Color.Black && button1.ForeColor == Color.DarkGray && button3.ForeColor == Color.Black)
+            {
+                button2.ForeColor = Color.DarkGray;
+                button2.BackColor = Color.LightGray;
+                button1.ForeColor = Color.Black;
+                button1.BackColor = Color.DarkGray;
             }
         }
 
-        private void Username_TextChanged(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            ValidateTextBoxes();
+            if (button3.ForeColor == Color.Black && button2.ForeColor == Color.Black && button1.ForeColor == Color.DarkGray)
+            {
+                button3.ForeColor = Color.DarkGray;
+                button3.BackColor = Color.LightGray;
+                button1.ForeColor = Color.Black;
+                button1.BackColor = Color.DarkGray;
+            }
+            else if (button3.ForeColor == Color.DarkGray && button2.ForeColor == Color.Black && button1.ForeColor == Color.Black)
+            {
+                button3.ForeColor = Color.Black;
+                button3.BackColor = Color.DarkGray;
+
+                Random rnd = new Random();
+                int random = rnd.Next(2);
+
+                if (random == 0)
+                {
+                    button2.ForeColor = Color.DarkGray;
+                    button2.BackColor = Color.LightGray;
+                }
+                else
+                {
+                    button1.ForeColor = Color.DarkGray;
+                    button1.BackColor = Color.LightGray;
+                }
+            }
+            else if (button3.ForeColor == Color.Black && button2.ForeColor == Color.DarkGray && button1.ForeColor == Color.Black)
+            {
+                button3.ForeColor = Color.DarkGray;
+                button3.BackColor = Color.LightGray;
+                button2.ForeColor = Color.Black;
+                button2.BackColor = Color.DarkGray;
+            }
         }
-
-        private void Password_TextChanged(object sender, EventArgs e)
-        {
-            ValidateTextBoxes();
-        }
-
-        void ValidateTextBoxes()
-        {
-            LoginButton.Enabled = Username.Text.Trim() != "" && Password.Text.Trim() != "";
-        }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        //bool Kontrol()
-        //{
-        //    string[] kullaniciAdlari = { "Admin", "Mustafa", "Dila" };
-
-        //    for (int i = 0; i < kullaniciAdlari.Length; i++)
-        //    {
-        //        if (Username.Text == kullaniciAdlari[i])
-        //        {
-        //            return true;
-        //        }
-        //    }
-
-        //    return false;
-        //}
     }
 }

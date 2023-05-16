@@ -1,6 +1,6 @@
-﻿namespace MyFirstFormAppProject
+﻿namespace GoodFastCheap
 {
-    partial class LoginForm
+    partial class Form1
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,114 +28,68 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.LoginButton = new System.Windows.Forms.Button();
-            this.Username = new System.Windows.Forms.TextBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.Password = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.InvalidText = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // LoginButton
+            // button1
             // 
-            this.LoginButton.BackColor = System.Drawing.Color.Orange;
-            this.LoginButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.LoginButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LoginButton.Enabled = false;
-            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.LoginButton.ForeColor = System.Drawing.Color.Black;
-            this.LoginButton.Location = new System.Drawing.Point(88, 258);
-            this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(187, 34);
-            this.LoginButton.TabIndex = 0;
-            this.LoginButton.Text = "Giriş Yap";
-            this.LoginButton.UseVisualStyleBackColor = false;
-            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
+            this.button1.BackColor = System.Drawing.Color.DarkGray;
+            this.button1.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(332, 91);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(200, 50);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "GOOD";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Username
+            // button2
             // 
-            this.Username.Location = new System.Drawing.Point(88, 137);
-            this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(187, 27);
-            this.Username.TabIndex = 10;
-            this.Username.TextChanged += new System.EventHandler(this.Username_TextChanged);
+            this.button2.BackColor = System.Drawing.Color.DarkGray;
+            this.button2.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(332, 172);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(200, 50);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "CHEAP";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // errorProvider1
+            // button3
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.button3.BackColor = System.Drawing.Color.LightGray;
+            this.button3.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.Color.DarkGray;
+            this.button3.Location = new System.Drawing.Point(332, 257);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(200, 50);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "FAST";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // Password
-            // 
-            this.Password.Location = new System.Drawing.Point(88, 197);
-            this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(187, 27);
-            this.Password.TabIndex = 11;
-            this.Password.Text = " ";
-            this.Password.TextChanged += new System.EventHandler(this.Password_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(88, 114);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 20);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Kullanıcı Adı:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(88, 174);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 20);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Şifre:";
-            // 
-            // InvalidText
-            // 
-            this.InvalidText.AutoSize = true;
-            this.InvalidText.ForeColor = System.Drawing.Color.IndianRed;
-            this.InvalidText.Location = new System.Drawing.Point(58, 311);
-            this.InvalidText.Name = "InvalidText";
-            this.InvalidText.Size = new System.Drawing.Size(259, 20);
-            this.InvalidText.TabIndex = 14;
-            this.InvalidText.Text = "Bilgileri Kontrol edip tekrar deneyiniz.";
-            this.InvalidText.Visible = false;
-            // 
-            // LoginForm
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(372, 429);
-            this.Controls.Add(this.InvalidText);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Password);
-            this.Controls.Add(this.Username);
-            this.Controls.Add(this.LoginButton);
-            this.Name = "LoginForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Giriş Yap";
-            this.Load += new System.EventHandler(this.LoginForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Name = "Form1";
+            this.Text = "Form1";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Button LoginButton;
-        private TextBox Username;
-        private System.Windows.Forms.Timer timer1;
-        private ErrorProvider errorProvider1;
-        private TextBox Password;
-        private Label InvalidText;
-        private Label label2;
-        private Label label1;
+        private Button button1;
+        private Button button2;
+        private Button button3;
     }
 }
