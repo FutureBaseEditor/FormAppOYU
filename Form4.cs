@@ -37,9 +37,25 @@ namespace MyFirstFormAppProject
             Hayir.Location = new Point(x,y);
         }
 
+        int count = 0;
+        string[] messagess = {
+            "Öyle hemen gitmek yok 🙂" ,
+            "Bir daha denesene 😄",
+            "Hoş geldin hoş geldin. nerede bu insanlar",
+            "Sakın bir daha kapatmayı deneme",
+            "Bilgisayarını formatlarım",
+            "Yiyorsa KAPAT",
+            "hahahahahaha ahahahahah ahaha",
+        };
         private void label2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Öyle hemen gitmek yok 🙂");
+            MessageBox.Show( messagess[count] );
+            count++;
+
+            if (count >= messagess.Length)
+            {
+                label2.Visible = false;
+            }
         }
 
 
