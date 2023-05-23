@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.playerTimer = new System.Windows.Forms.Timer(this.components);
             this.suhrab = new System.Windows.Forms.PictureBox();
             this.dila = new System.Windows.Forms.PictureBox();
             this.lokman = new System.Windows.Forms.PictureBox();
@@ -38,15 +38,15 @@
             this.mert = new System.Windows.Forms.PictureBox();
             this.mustafa = new System.Windows.Forms.PictureBox();
             this.senan = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.start = new System.Windows.Forms.Button();
             this.finish = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.finishFlag = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.hole = new System.Windows.Forms.PictureBox();
             this.bonus = new System.Windows.Forms.PictureBox();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.hitControlTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.suhrab)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dila)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lokman)).BeginInit();
@@ -56,17 +56,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.senan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.finish)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finishFlag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hole)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bonus)).BeginInit();
             this.SuspendLayout();
             // 
-            // timer1
+            // playerTimer
             // 
-            this.timer1.Interval = 300;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.playerTimer.Interval = 400;
+            this.playerTimer.Tick += new System.EventHandler(this.playerTimer_Tick);
             // 
             // suhrab
             // 
@@ -77,7 +77,6 @@
             this.suhrab.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.suhrab.TabIndex = 2;
             this.suhrab.TabStop = false;
-            this.suhrab.LocationChanged += new System.EventHandler(this.suhrab_LocationChanged);
             // 
             // dila
             // 
@@ -88,7 +87,6 @@
             this.dila.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.dila.TabIndex = 3;
             this.dila.TabStop = false;
-            this.dila.LocationChanged += new System.EventHandler(this.dila_LocationChanged);
             // 
             // lokman
             // 
@@ -123,7 +121,7 @@
             // mustafa
             // 
             this.mustafa.Image = ((System.Drawing.Image)(resources.GetObject("mustafa.Image")));
-            this.mustafa.Location = new System.Drawing.Point(12, 330);
+            this.mustafa.Location = new System.Drawing.Point(12, 648);
             this.mustafa.Name = "mustafa";
             this.mustafa.Size = new System.Drawing.Size(100, 100);
             this.mustafa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -133,22 +131,22 @@
             // senan
             // 
             this.senan.Image = ((System.Drawing.Image)(resources.GetObject("senan.Image")));
-            this.senan.Location = new System.Drawing.Point(12, 648);
+            this.senan.Location = new System.Drawing.Point(12, 330);
             this.senan.Name = "senan";
             this.senan.Size = new System.Drawing.Size(100, 100);
             this.senan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.senan.TabIndex = 8;
             this.senan.TabStop = false;
             // 
-            // button1
+            // start
             // 
-            this.button1.Location = new System.Drawing.Point(12, 787);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 29);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Başla";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.start.Location = new System.Drawing.Point(12, 787);
+            this.start.Name = "start";
+            this.start.Size = new System.Drawing.Size(100, 29);
+            this.start.TabIndex = 9;
+            this.start.Text = "Başla";
+            this.start.UseVisualStyleBackColor = true;
+            this.start.Click += new System.EventHandler(this.start_Click);
             // 
             // finish
             // 
@@ -170,15 +168,15 @@
             this.pictureBox3.TabIndex = 11;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox4
+            // finishFlag
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(1213, 336);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(153, 156);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 12;
-            this.pictureBox4.TabStop = false;
+            this.finishFlag.Image = ((System.Drawing.Image)(resources.GetObject("finishFlag.Image")));
+            this.finishFlag.Location = new System.Drawing.Point(1213, 336);
+            this.finishFlag.Name = "finishFlag";
+            this.finishFlag.Size = new System.Drawing.Size(153, 156);
+            this.finishFlag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.finishFlag.TabIndex = 12;
+            this.finishFlag.TabStop = false;
             // 
             // pictureBox5
             // 
@@ -222,10 +220,10 @@
             this.bonus.TabStop = false;
             this.bonus.Visible = false;
             // 
-            // timer2
+            // hitControlTimer
             // 
-            this.timer2.Interval = 10;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            this.hitControlTimer.Interval = 10;
+            this.hitControlTimer.Tick += new System.EventHandler(this.hitControlTimer_Tick);
             // 
             // Form5
             // 
@@ -233,8 +231,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1378, 829);
-            this.Controls.Add(this.bonus);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.start);
             this.Controls.Add(this.senan);
             this.Controls.Add(this.mustafa);
             this.Controls.Add(this.mert);
@@ -242,12 +239,13 @@
             this.Controls.Add(this.lokman);
             this.Controls.Add(this.dila);
             this.Controls.Add(this.suhrab);
-            this.Controls.Add(this.hole);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.finishFlag);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.finish);
+            this.Controls.Add(this.bonus);
+            this.Controls.Add(this.hole);
             this.Name = "Form5";
             this.Text = "Alpay Hocaaaa    ";
             ((System.ComponentModel.ISupportInitialize)(this.suhrab)).EndInit();
@@ -259,7 +257,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.senan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.finish)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.finishFlag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hole)).EndInit();
@@ -270,7 +268,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer playerTimer;
         private PictureBox suhrab;
         private PictureBox dila;
         private PictureBox lokman;
@@ -278,14 +276,14 @@
         private PictureBox mert;
         private PictureBox mustafa;
         private PictureBox senan;
-        private Button button1;
+        private Button start;
         private PictureBox finish;
         private PictureBox pictureBox3;
-        private PictureBox pictureBox4;
+        private PictureBox finishFlag;
         private PictureBox pictureBox5;
         private PictureBox pictureBox6;
         private PictureBox hole;
         private PictureBox bonus;
-        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Timer hitControlTimer;
     }
 }
